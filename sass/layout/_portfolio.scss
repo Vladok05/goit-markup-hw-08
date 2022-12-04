@@ -1,0 +1,124 @@
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+  }
+  
+  .filter-list__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  
+  .button-fiter {
+    border-radius: 4px;
+    padding: 6px 22px;
+    border: none;
+  
+    background-color: var(--background-color-sectionteam);
+    color: var(--color-titel-nav);
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--color-accent-two);
+      background-color: var(--color-accent);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px
+  }
+  
+  .portfolio__item {
+    margin-bottom: 30px;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+    
+  .portfolio__wrapper-description {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    border-bottom: 1px solid var(--color-accent-three);
+    border-left: 1px solid var(--color-accent-three);
+    border-right: 1px solid var(--color-accent-three);
+  }
+  
+  .portfolio__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+  
+    color: var(--color-titel-nav);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  
+  .portfolio__subtitle {
+    margin: 0;
+  
+    color: var(--color-main);
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+  }
+  
+  .portfolio__link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
+  }
+  }
+  
+  
+  
+  .portfolio__wrapper-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  
+    padding: 63px 24px;
+  
+    background: rgba(33, 150, 243, 0.9);
+  
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .portfolio__link:hover &,
+    .portfolio__link:focus & {
+      transform: translateY(0);
+    }
+    
+  }
+  
+  .portfolio__wrapper-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+  .portfolio__subtitle-overlay {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--color-accent-two);
+    margin: 0;
+  }

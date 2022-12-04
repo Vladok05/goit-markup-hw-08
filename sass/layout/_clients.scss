@@ -1,0 +1,32 @@
+
+.clients-list {
+  @include flex-center;
+    gap: 30px;
+  }
+  
+  .clients-list__link {
+    @include flex-center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--color-icon-social);
+    border-radius: 4px;
+    outline: none;
+  
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--color-accent);
+    }
+  }
+  
+  .clients-list__icon {
+    fill: var(--color-icon-social);
+  
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .clients-list__link:hover &,
+    .clients-list__link:focus & {
+      fill: var(--color-accent);
+    }
+  }
+  

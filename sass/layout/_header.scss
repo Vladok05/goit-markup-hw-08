@@ -1,0 +1,118 @@
+.header {
+    border-bottom: 1px solid var(--color-accent-three);
+  }
+  
+.header__container {
+    display: flex;
+    border-bottom: 1px var(--color-accent-three);
+  }
+  .site-nav {
+    display: flex;
+
+  }
+  
+  .site-nav__list {
+    display: flex;
+    gap: 50px;
+  }
+  .logo--color-text {
+    color: var(--color-accent);
+  }
+  
+  .site-nav__link {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    color: var(--color-titel-nav);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color-accent);
+    }
+  }
+
+  .link.site-nav__link--active {
+    color: var(--color-accent);
+  }
+
+
+    .site-nav__link.site-nav__link--active::after {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+    
+      display: block;
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+    
+      background-color: var(--color-accent);
+    }
+  
+
+  .site-nav__link::after{
+
+    content: "";
+    background-color: transparent;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+  .site-nav__link:hover::after,
+  .site-nav__link:focus::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-accent);
+  }
+  
+  .header__contacts-list {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+  
+    .header__contacts-link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+  
+    color: var(--color-main);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    &:hover,
+    &:focus {    color: var(--color-accent);
+    }
+  }
+
+  .header__contacts-item{ 
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  }
+
+  .header__contacts-icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  
+  

@@ -1,0 +1,25 @@
+body {
+    color: var(--color-main);
+    background-color: var(--color-accent-two);
+    font-family: Roboto, sans-serif;
+  }
+
+  img,
+  a
+  {
+    display: block;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
