@@ -5,6 +5,13 @@
     justify-content: space-between;
     text-align: center;
 
+    @include tablet {
+      flex-wrap: wrap;
+      flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    }
+
     @include desktop {
       display: flex;
       flex-direction: row;
@@ -88,6 +95,9 @@
 
   .fotter__wrapper-social {
     margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 0;
+    }
     @include desktop {
       margin-bottom: 0;
     }
@@ -132,6 +142,11 @@
     flex-direction: column;
     gap: 12px;
 
+    @include tablet {
+     align-items: center;
+     gap: 20px;
+    }
+
     @include desktop {
       @include flex-center;
       flex-direction: row;
@@ -141,6 +156,12 @@
   .form-subscription__input {
     width: 100%;
     margin-bottom: 20px;
+
+    @include tablet{
+      width: 450px;
+      height: 50px;
+      margin-bottom: 0px;
+    }
    
     @include desktop {
       width: auto;
