@@ -800,7 +800,7 @@ button {
 }
 
 .benefits-list__item {
-  width: 100%;
+  flex-basis: calc((100% - 0px) / 1);
 }
 @media screen and (min-width: 768px) {
   .benefits-list__item {
@@ -831,29 +831,12 @@ button {
 }
 
 .benefits-list__wrapper {
-  padding: 25px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
   background-color: var(--background-color-sectionteam);
   margin-bottom: 30px;
-}
-@media screen and (min-width: 480px) {
-  .benefits-list__wrapper {
-    padding: 25px 190px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .benefits-list__wrapper {
-    padding: 25px 142px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .benefits-list__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 120px;
-    padding: 0;
-  }
 }
 
 .section-we-do {

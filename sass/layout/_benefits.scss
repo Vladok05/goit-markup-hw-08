@@ -18,7 +18,7 @@
   }
 
   .benefits-list__item {
-    width: 100%;
+    flex-basis: calc((100% - 30px * 0) / 1);
 
     @include tablet {
       flex-basis: calc((100% - 30px * 2) / 2);
@@ -49,24 +49,19 @@
   }
   
   .benefits-list__wrapper {
-    padding: 25px 110px;
+    @include flex-center;
+    padding: 25px 0;
+    
     background-color: var(--background-color-sectionteam);
     margin-bottom: 30px;
    
-    @include mobile {
-      padding: 25px 190px;
-    }
-
-    @include tablet {
-      padding: 25px 142px;
-    }
+    
     
     
 
-    @include desktop {
-    @include flex-center;
-    width: 270px;
-    height: 120px;
-    padding: 0;
-    }
+    // @include desktop {
+    // width: 270px;
+    // height: 120px;
+    // padding: 0;
+    // }
   }
