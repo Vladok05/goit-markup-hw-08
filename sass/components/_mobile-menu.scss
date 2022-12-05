@@ -100,16 +100,14 @@ color: var(--color-titel-nav);
 
     .mobile-nenu__social-item:not(:last-child) &::after {
       position: absolute;
-      top: 50%;
-      right: -11px;
+      top: 0;
+      right: 0;
       
       content: "";
-      width: 22px;
-      display: block;
-      border: 1px solid rgba(33, 33, 33, 0.2);
+      width: 1px;
+      height: 100%;
       background-color: rgba(33, 33, 33, 0.2);
-      transform: rotate(90deg);
-    }
+      }
     @include mobile {
       font-weight: 500;
       font-size: 18px;
