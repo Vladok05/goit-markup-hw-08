@@ -1,11 +1,14 @@
 .filter-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
     margin-bottom: 34px;
-  }
-  
-  .filter-list__item:not(:last-child) {
-    margin-right: 8px;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
   }
   
   .button-fiter {
@@ -34,18 +37,30 @@
   
   .portfolio {
     display: flex;
+    flex-direction: column;
+    
+  }
+
+  @include tablet {
     flex-wrap: wrap;
     gap: 30px
+
   }
   
   .portfolio__item {
+    flex-basis: calc((100% - 0 * 30px) / 1);
     margin-bottom: 30px;
     flex-basis: calc((100% - 2 * 30px) / 3);
 
     &:nth-last-child(-n + 3) {
       margin-bottom: 0;
     }
+
+    @include desktop{
+      flex-basis: calc((100% - 2 * 30px) / 3);
+    }
   }
+
     
   .portfolio__wrapper-description {
     padding-top: 20px;
@@ -76,6 +91,9 @@
   }
   
   .portfolio__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
@@ -89,6 +107,7 @@
   
   
   .portfolio__wrapper-overlay {
+  
     position: absolute;
     width: 100%;
     height: 100%;
@@ -110,6 +129,7 @@
   }
   
   .portfolio__wrapper-card {
+    flex-grow: 1;
     position: relative;
     overflow: hidden;
   }

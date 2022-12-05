@@ -11,6 +11,11 @@
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    overflow: scroll;
+  @include desktop {
+    overflow: visible;
+  }
 }
 
 .backdrop.is-hidden {
@@ -26,15 +31,27 @@
 .modal {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50% -50%);
+  top: 20px;
+  transform: translateX( -50%);
   cursor: pointer;
   padding: 40px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translate(-50%, -50%) scale(1);
 
-  width: 528px;
+  transform: translateX(-50%) scale(1);
+
+  width: 320px;
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop{
+    width: 528px;
+    top: 50%;
+    transform: translateX(-50, -50%);
+    
+  }
 
   background-color: var(--color-accent-two);
 }
@@ -73,14 +90,24 @@
 
 .modal_subtitle {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: 18px;
+  line-height: calc(28/18);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-titel-nav);
 
   margin-top: 0;
   margin-bottom: 12px;
+
+  @include mobile {
+    font-size: 20px;
+  line-height: calc(30/20);
+  }
+@include desktop {
+  font-size: 20px;
+  line-height: 1.15;
+}
+
 }
 
 .form-label {
@@ -150,11 +177,20 @@
 }
 
 .checkbox-label {
-  @include flex-center;
+  text-align: center;
 
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: calc(14/12);
+
+  @include mobile { 
+    @include flex-center;
+    text-align: left;
+  }
+  @include desktop{
+    font-size: 14px;
+    line-height: 1.7;
+  }
   letter-spacing: 0.03em;
   margin-bottom: 30px;
   cursor: pointer;
@@ -169,8 +205,11 @@
 .checkbox-imput__icon {
   position: absolute;
   top: 50%;
-  left: 0;
-  opacity: 0;
+  left: -12px;
+  @include mobile{
+    left: 0%; 
+  }
+  opacity: 1;
 
   transform: translateY(-50%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -179,7 +218,10 @@
 .checkbox-imput__icon-check {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -12px;
+  @include mobile{
+    left: 0%; 
+  }
   opacity: 1;
 
   transform: translateY(-50%);
@@ -195,6 +237,7 @@
 }
 
 .checkbox-imput__link {
+  display: inline-block;
   color: var(--color-accent);
   text-decoration: underline;
 }

@@ -13,11 +13,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- шапка -->
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header__container">
         <nav class="site-nav">
           <a href="./index.html" class="logo link" aria-label="logo"
@@ -25,12 +25,10 @@
           >
           <ul class="site-nav__list list">
             <li class="site-nav___item">
-              <a href="./index.html" class="site-nav__link link">Студія</a>
+              <a href="./index.html" class="site-nav__link site-nav__link--active link">Студія</a>
             </li>
             <li class="site-nav___item">
-              <a href="./portfolio.html" class="site-nav__link site-nav__link--active link"
-                >Портфоліо</a
-              >
+              <a href="./portfolio.html" class="site-nav__link link">Портфоліо</a>
             </li>
             <li class="site-nav___item"><a href="#" class="site-nav__link link">Контакти</a></li>
           </ul>
@@ -51,8 +49,13 @@
             >
           </li>
         </ul>
+        <button class="menu-btn header__menu-btn js-open-menu" type="button">
+          <svg class="menu-btn__icon" width="40" height="40">
+            <use href="./images/sprite-defs.svg#menu_mobile"></use>
+          </svg>
+        </button>
       </div>
-    </header>
+    </header> -->
     <main>
       <section class="portfolio section">
         <div class="container">
@@ -78,11 +81,25 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_website_tex.jpg"
-                    alt="приклад дизайну веб-сайта"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img370@1x.jpg 1x, ./images/img370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/354@1x.jpg 1x, ./images/img354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/img450@1x.jpg 1x, ./images/img450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/img370@1x.jpg"
+                      alt="приклад дизайну веб-сайта"
+                    />
+                  </picture>
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -101,11 +118,27 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_new_orlean.jpg"
-                    alt="приклад дизайну постера  матч с баскетболу"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/golden370@1x.jpg 1x, ./images/golden370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/golden353@1x.jpg 1x, ./images/golden354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="./images/golden450@1x.jpg.jpg 1x, ./images/golden450@2x.jpg 2x"
+                    />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/golden370@1x.jpg"
+                      alt="приклад дизайну постера  матч с баскетболу"
+                    />
+                  </picture>
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -126,11 +159,25 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_seafood.jpg"
-                    alt="приклад дизайну зображено лейбела ресорана"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/seafood370@1x.jpg 1x, ./images/seafood370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/seafood354@1x.jpg 1x, ./images/seafood354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/seafood450@1x.jpg 1x, ./images/seafood450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/seafood370@1x.jpg"
+                      alt="приклад дизайну зображено лейбела ресорана"
+                    />
+                  </picture>
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -148,11 +195,25 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_project_prime.jpg"
-                    alt="приклад дизайну лейбла проєкта зображено навушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/prime370@1x.jpg 1x, ./images/prime370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/prime354@1x.jpg 1x, ./images/prime354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/prime450@1x.jpg 1x, ./images/prime450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/prime370@1x.jpg"
+                      alt="приклад дизайну лейбла проєкта зображено навушники"
+                    />
+                  </picture>
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -171,11 +232,26 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_boxes.jpg"
-                    alt="приклад дезайна додатку зображено упаковочні коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/boxes370@1x.jpg 1x, ./images/boxes370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/boxes354@1x.jpg 1x, ./images/boxes354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/boxes450@1x.jpg 1x, ./images/boxes450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/boxes370@1x.jpg"
+                      alt="приклад дезайна додатку зображено упаковочні коробки"
+                    />
+                  </picture>
+
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -194,11 +270,28 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_website_two.jpg"
-                    alt="приклад дизайну веб-сайта"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/inspiration370@1x.jpg 1x, ./images/inspiration370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/inspiration354@1x.jpg 1x, ./images/inspiration354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="./images/inspiration450@1x.jpg 1x, ./images/inspiration450@2x.jpg 2x"
+                    />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/inspiration370@1x.jpg"
+                      alt="приклад дизайну веб-сайта"
+                    />
+                  </picture>
+
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -219,7 +312,26 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img src="./images/img_newspaper.jpg" alt="приклад дизайну журналу" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/limited370@1x.jpg 1x, ./images/limited370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/limited354@1x.jpg 1x, ./images/limited354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/limited450@1x.jpg 1x, ./images/limited450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/limited370@1x.jpg"
+                      alt="приклад дизайну журналу"
+                    />
+                  </picture>
+
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -238,11 +350,26 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/lab_img.jpg"
-                    alt="приклад дизайну проекту зображено бірку"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/lab370@1x.jpg 1x, ./images/lab370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/lab354@1x.jpg 1x, ./images/lab354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/lab450@1x.jpg 1x, ./images/lab450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/lab370@1x.jpg"
+                      alt="приклад дизайну проекту зображено бірку"
+                    />
+                  </picture>
+
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -261,11 +388,26 @@
             <li class="portfolio__item">
               <a href="#" class="link portfolio__link">
                 <div class="portfolio__wrapper-card">
-                  <img
-                    src="./images/img_growing_business.jpg"
-                    alt="приклад дизайну додатка зображено роботу з додатком на компютері"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/growing270@1x.jpg 1x, ./images/growing270@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/growing354@1x.jpg 1x, ./images/growing354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source srcset="./images/growing450@1x.jpg 1x, ./images/growing450@2x.jpg 2x" />
+
+                    <img
+                      class="section-team__photo"
+                      src="./images/growing370@1x.jpg"
+                      alt="приклад дизайну додатка зображено роботу з додатком на компютері"
+                    />
+                  </picture>
+
                   <div class="portfolio__wrapper-overlay">
                     <p class="portfolio__subtitle-overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -286,7 +428,7 @@
       </section>
     </main>
     <!-- футер -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container">
         <div class="fotter_wrapper_address">
           <a
@@ -386,6 +528,74 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="menu-btn mobile-menu__menu-btn js-close-menu">
+        <svg
+          class="menu-btn__icon"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu___item">
+            <a href="./index.html" class="mobile-menu__link link">Студія</a>
+          </li>
+          <li class="mobile-menu___item">
+            <a href="./portfolio.html" class="mobile-menu__link mobile-menu__link--active link"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobile-menu___item">
+            <a href="#" class="mobile-menu__link link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-menu__contacts-list list">
+        <li class="mobile-menu__contacts-item">
+          <a href="tel:+380961111111" class="mobile-menu__tel-link link">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-menu__contacts-item">
+          <a href="mailto:info@devstudio.com" class="mobile-menu__mail-link link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-nenu__social-list list">
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">Instagram</a>
+        </li>
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">Twitter</a>
+        </li>
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">Facebook</a>
+        </li>
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

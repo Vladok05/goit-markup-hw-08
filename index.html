@@ -16,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
     <!-- шапка -->
@@ -52,6 +52,11 @@
             >
           </li>
         </ul>
+        <button class="menu-btn header__menu-btn js-open-menu" type="button">
+          <svg class="menu-btn__icon" width="40" height="40">
+            <use href="./images/sprite-defs.svg#menu_mobile"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -117,7 +122,7 @@
         </div>
       </section>
 
-      <!-- третя секція  -->
+      <!-- третя секція -->
       <section class="section-we-do section">
         <div class="container">
           <h2 class="section__title">Чим ми займаємося</h2>
@@ -152,13 +157,32 @@
         </div>
       </section>
 
-      <!-- четверта секція -->
+      <!--  четверта секція -->
       <section class="section-team section">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list__item">
-              <img src="./images/img_one.jpg" alt="фото чоловіка" width="270" />
+              <picture>
+                <source
+                  srcset="./images/product270@1x.jpg 1x, ./images/product270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/product354@1x.jpg 1x, ./images/product354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source srcset="./images/product450@1x.jpg 1x, ./images/product450@2x.jpg 2x" />
+
+                <img
+                  class="section-team__photo"
+                  src="./images/product270@1x.jpg"
+                  alt="фото чоловіка"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__titlee">Ігор Дем'яненко</h3>
                 <p class="team-list__subtitle"><span lang="en">Product Designer</span></p>
@@ -195,7 +219,26 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/img_two.jpg" alt="фото дівчини" width="270" />
+              <picture>
+                <source
+                  srcset="./images/frontend270@1x.jpg 1x, ./images/frontend270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/frontend354@1x.jpg 1x, ./images/frontend354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source srcset="./images/frontend450@1x.jpg 1x, ./images/frontend450@2x.jpg 2x" />
+
+                <img
+                  class="section-team__photo"
+                  src="./images/frontend270@1x.jpg"
+                  alt="фото дівчини"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__titlee">Ольга Рєпіна</h3>
                 <p class="team-list__subtitle"><span lang="en">Frontend Developer</span></p>
@@ -232,7 +275,26 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/img_three.jpg" alt="фото чоловіка" width="270" />
+              <picture>
+                <source
+                  srcset="./images/marketing270@1x.jpg 1x, ./images/marketing270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/marketing354@1x.jpg 1x, ./images/marketing354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source srcset="./images/marketing450@1x.jpg 1x, ./images/marketing450@2x.jpg 2x" />
+
+                <img
+                  class="section-team__photo"
+                  src="./images/marketing270@1x.jpg"
+                  alt="фото чоловіка"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__titlee">Микола Тарасов</h3>
                 <p class="team-list__subtitle"><span lang="en">Marketing</span></p>
@@ -269,7 +331,26 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/img_four.jpg" alt="фото чоловіка" width="270" />
+              <picture>
+                <source
+                  srcset="./images/designer270@1x.jpg 1x, ./images/designer270@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/designer354@1x.jpg 1x, ./images/designer354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source srcset="./images/designer450@1x.jpg 1x, ./images/designer450@2x.jpg 2x" />
+
+                <img
+                  class="section-team__photo"
+                  src="./images/designer270@1x.jpg"
+                  alt="фото чоловіка"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__titlee">Михайло Єрмаков</h3>
                 <p class="team-list__subtitle"><span lang="en">UI Designer</span></p>
@@ -359,7 +440,7 @@
         </div>
       </section>
     </main>
-    <!-- футер -->
+    <!--  футер -->
 
     <footer class="footer">
       <div class="container footer__container">
@@ -533,6 +614,73 @@
       </div>
     </div>
 
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="menu-btn mobile-menu__menu-btn js-close-menu">
+        <svg
+          class="menu-btn__icon"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu___item">
+            <a href="./index.html" class="mobile-menu__link mobile-menu__link--active link"
+              >Студія</a
+            >
+          </li>
+          <li class="mobile-menu___item">
+            <a href="./portfolio.html" class="mobile-menu__link link">Портфоліо</a>
+          </li>
+          <li class="mobile-menu___item">
+            <a href="#" class="mobile-menu__link link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-menu__contacts-list list">
+        <li class="mobile-menu__contacts-item">
+          <a href="tel:+380961111111" class="mobile-menu__tel-link link">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-menu__contacts-item">
+          <a href="mailto:info@devstudio.com" class="mobile-menu__mail-link link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-nenu__social-list list">
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">Instagram</a>
+        </li>
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">Twitter</a>
+        </li>
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">Facebook</a>
+        </li>
+        <li class="mobile-nenu__social-item">
+          <a class="mobile-nenu__social-link link" href="#">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

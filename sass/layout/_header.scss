@@ -3,17 +3,21 @@
   }
   
 .header__container {
-    display: flex;
+  display: flex;
+  align-items: center;
     border-bottom: 1px var(--color-accent-three);
   }
   .site-nav {
-    display: flex;
+      display: flex;
+    }
 
-  }
-  
   .site-nav__list {
-    display: flex;
-    gap: 50px;
+   
+    display: none;
+    @include tablet {
+      display: flex;
+      gap: 50px;
+    }
   }
   .logo--color-text {
     color: var(--color-accent);
@@ -81,17 +85,33 @@
   }
   
   .header__contacts-list {
-    display: flex;
-    margin-left: auto;
-    align-items: center;
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      justify-content: flex-start;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      gap: 10px;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      align-items: center;
+      
+    }
+  
   }
   
     .header__contacts-link {
+      @include tablet {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding:0;
     align-items: center;
-  
+
     color: var(--color-main);
     text-decoration: none;
     font-weight: 500;
@@ -101,18 +121,35 @@
     &:hover,
     &:focus {    color: var(--color-accent);
     }
+      }
+
+    @include desktop {
+      display: flex;
+    align-items: center;
+    }
+  
   }
 
   .header__contacts-item{ 
+    @include tablet {
+      margin: 0;
+
+    }
+    @include desktop {
   &:not(:last-child) {
     margin-right: 30px;
   }
+}
   }
 
   .header__contacts-icon {
-    display: block;
-    margin-right: 10px;
+    @include tablet {
+      display: block;
+      margin-right: 10px;
     fill: currentColor;
-  }
-  
-  
+    }
+}
+
+  .header__menu-btn {
+    margin-left: auto;
+}

@@ -1,36 +1,76 @@
-.hero__container {
-  max-width: 1600px;
-}
 
 .section-hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    max-width: 1600px;
+    height: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--background-color-hero);
-    text-align: center;
   
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/background_img.jpg);
-  
-    height: auto;
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero480@1x.jpg);
+    @include retina-bgi {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero480@2x.jpg);
+    }
+
+    @include mobile {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero768@1x.jpg);
+      @include retina-bgi {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero768@2x.jpg);
+      }
+    }
+    
+
+    @include tablet {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero1600@1x.jpg);
+      @include retina-bgi {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero1600@2x.jpg);
+      }
+    }
+
+    
+
+    @include desktop {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
   }
   
   .section-hero__main-title {
+    max-width: 360px;
     margin-top: 0;
     margin-bottom: 30px;
-    width: 696px;
     margin-right: auto;
     margin-left: auto;
   
     color: var(--color-accent-two);
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 20px;
+    line-height: calc(38/20);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @include mobile {
+      max-width: 360px;
+      font-size: 26px;
+      line-height: calc(42/26);
+    }
+
+    @include desktop {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+
   }

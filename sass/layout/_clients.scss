@@ -1,13 +1,35 @@
 
 .clients-list {
-  @include flex-center;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+
+    @include desktop {
+      @include flex-center;
+    }
+
   }
   
   .clients-list__link {
-    @include flex-center;
-    width: 170px;
-    height: 92px;
+    padding: 8px 11px;
+    flex-basis: calc(100% - 30px * 1) / 2;
+
+    @include mobile {
+      flex-basis: calc(100% - 30px * 1) / 2;
+      padding: 16px 51px;
+    }
+    
+    @include tablet {
+      @include flex-center;
+      flex-basis: calc(100% - 30px * 2) / 3;
+      padding: 16px, 60px;
+    }
+
+    @include desktop {
+      padding: 0;
+      @include flex-center;
+      flex-basis: calc(100% - 30px * 5) / 6;
+    }
     border: 1px solid var(--color-icon-social);
     border-radius: 4px;
     outline: none;

@@ -1,0 +1,1 @@
+.menu-container{position:fixed;top:0;left:0;width:100vw;height:100vh;padding:32px;background-color:#3f51b5;z-index:999;transform:translateX(100%);transition:transform 250ms ease-in-out}.menu-container.is-open{transform:translateX(0)}/*# sourceMappingURL=-menu-container.min.css.map */

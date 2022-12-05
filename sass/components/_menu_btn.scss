@@ -1,0 +1,26 @@
+.menu-btn {
+ width: 40px;
+ height: 40px;
+ background-color: transparent;
+ border: none;
+ padding: 0;
+ @include flex-center;
+
+ @include tablet {
+    display:none;
+ }
+
+
+}
+
+.menu-btn__icon {
+    fill: var(--color-logo);
+
+    .menu-btn:hover &,
+    .menu-btn:focus & {
+       fill: var(--color-accent);
+    }
+}
+
+
+
