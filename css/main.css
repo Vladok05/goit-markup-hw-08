@@ -650,6 +650,7 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .header__contacts-list {
+    padding: 0;
     display: flex;
     flex-direction: row;
     margin-left: auto;
@@ -675,9 +676,9 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .header__contacts-link {
-    padding: 32px 32px;
     display: flex;
     align-items: center;
+    padding: 23px 0;
   }
 }
 
